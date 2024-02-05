@@ -42,7 +42,6 @@ $(".slider-faq_component").each(function (index) {
 
 $(".swiper_testimonial").each(function (index) {
   const swiper = new Swiper($(this).find(".swiper")[0], {
-    crossFade: false,
     slidesPerView: 1,
     keyboard: true,
     mousewheel: {
