@@ -1,5 +1,3 @@
-console.log("Its conected");
-
 let photoSwiper = new Swiper(".swiper.is-card", {
   effect: "cards",
   grabCursor: true,
@@ -38,6 +36,25 @@ $(".slider-faq_component").each(function (index) {
       nextEl: $(this).find(".swiper-next")[0],
       prevEl: $(this).find(".swiper-prev")[0],
       disabledClass: "is-disabled",
+    },
+  });
+});
+
+$(".swiper_testimonial").each(function (index) {
+  const swiper = new Swiper($(this).find(".swiper.is-testimonial")[0], {
+    crossFade: true,
+    slidesPerView: 1,
+    keyboard: true,
+    mousewheel: {
+      forceToAxis: true,
+    },
+    followFinger: true,
+    pagination: {
+      el: $(this).find(".swiper-bullet-wrapper")[0],
+      bulletActiveClass: "is-active",
+      bulletClass: "swiper-bullet",
+      bulletElement: "button",
+      clickable: true
     },
   });
 });
