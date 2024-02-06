@@ -40,20 +40,22 @@ $(".slider-faq_component").each(function (index) {
   });
 });
 
-let testimonialSwiper = new Swiper(".swiper.is-testimonial", {
-  crossFade: true,
-  keyboard: true,
-  loop: true,
-  keyboard: true,
-  mousewheel: {
-    forceToAxis: true,
-  },
-  followFinger: true,
-  pagination: {
-    el: $(this).find(".swiper-bullet-wrapper")[0],
-    bulletActiveClass: "is-active",
-    bulletClass: "swiper-bullet",
-    bulletElement: "button",
-    clickable: true
-  },
+$(".swiper_testimonial").each(function (index) {
+  const swiper = new Swiper($(this).find(".swiper.is-testimonial")[0], {
+    crossFade: true,
+    slidesPerView: 1,
+    keyboard: true,
+    loop: true,
+    mousewheel: {
+      forceToAxis: true,
+    },
+    followFinger: true,
+    pagination: {
+      el: $(this).find(".swiper-bullet-wrapper")[0],
+      bulletActiveClass: "is-active",
+      bulletClass: "swiper-bullet",
+      bulletElement: "button",
+      clickable: true
+    },
+  });
 });
